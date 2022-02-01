@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-<!--        <variable-->
-<!--            name="viewModel"-->
-<!--            type="com.example.soptseminar29th.presentation.sign.ViewModel.SignInViewModel" />-->
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="SOPTHub"
+            android:text="@string/SOPTHub"
             android:textColor="@color/pink"
             android:textSize="35sp"
             android:textStyle="bold"
@@ -33,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="로그인"
+            android:text="@string/signin"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -47,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginTop="50dp"
-            android:text="아이디"
+            android:text="@string/signin_id"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -63,7 +61,7 @@
             android:background="@drawable/rectangle_border_pink_10dp"
             android:ems="10"
             android:maxLines="1"
-            android:hint="아이디를 입력해주세요"
+            android:hint="@string/signin_id_hint"
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:textSize="15dp"
@@ -77,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginTop="30dp"
-            android:text="비밀번호"
+            android:text="@string/signin_pw"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -94,7 +92,7 @@
             android:background="@drawable/rectangle_border_pink_10dp"
             android:ems="10"
             android:maxLines="1"
-            android:hint="비밀번호를 입력해주세요"
+            android:hint="@string/signin_pw_hint"
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:textSize="15dp"
@@ -108,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
             android:background="@drawable/rectangle_fill_pink_10dp"
-            android:text="로그인"
+            android:text="@string/signin"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -123,7 +121,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="50dp"
             android:background="@drawable/rectangle_fill_white_10dp"
-            android:text="회원가입"
+            android:text="@string/signin_signup"
             android:textColor="@color/lightgray"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
