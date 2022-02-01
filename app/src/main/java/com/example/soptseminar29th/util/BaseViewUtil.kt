@@ -11,9 +11,10 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 
 sealed class BaseViewUtil {
-    abstract class BaseAppCompatActivity<T : ViewDataBinding>(@LayoutRes val layoutRes: Int) :
-        AppCompatActivity() {
-        protected lateinit var binding: T
+    abstract class BaseActivity<T : ViewDataBinding>(
+        @LayoutRes val layoutRes: Int
+        ) : AppCompatActivity() {
+        private lateinit var binding: T
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             binding = DataBindingUtil.setContentView(this, layoutRes)
