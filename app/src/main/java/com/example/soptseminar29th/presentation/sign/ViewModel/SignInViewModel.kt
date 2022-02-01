@@ -1,4 +1,4 @@
-package com.example.soptseminar29th.presentation.sign
+package com.example.soptseminar29th.presentation.sign.ViewModel
 
 import androidx.lifecycle.ViewModel
 

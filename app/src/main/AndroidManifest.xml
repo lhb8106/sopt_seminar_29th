@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoptSeminar29th">
         <activity
+            android:name=".presentation.sign.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.sign.SignUpActivity"
+            android:exported="true" />
+        <activity
             android:name=".presentation.sign.SignInActivity"
             android:exported="true">
             <intent-filter>

@@ -14,7 +14,7 @@ sealed class BaseViewUtil {
     abstract class BaseActivity<T : ViewDataBinding>(
         @LayoutRes val layoutRes: Int
         ) : AppCompatActivity() {
-        private lateinit var binding: T
+        lateinit var binding: T
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             binding = DataBindingUtil.setContentView(this, layoutRes)
