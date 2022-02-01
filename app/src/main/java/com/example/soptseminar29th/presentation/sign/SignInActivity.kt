@@ -3,6 +3,7 @@ package com.example.soptseminar29th.presentation.sign
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -25,6 +26,20 @@ class SignInActivity :
         initSignIn()
         initSignUp()
         setResultSignUp()
+
+    }
+
+    private fun setResultSignUp() {
+        getResultText = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) {
+            if (it.resultCode == RESULT_OK) {
+                val id = it.data?.getStringExtra("id")
+                val password = it.data?.getStringExtra("password")
+                binding.etId.setText(id)
+                binding.etPw.setText(password)
+            }
+        }
     }
 
     //로그인 버튼 클릭이벤트 (빈칸 체크)
@@ -49,15 +64,5 @@ class SignInActivity :
         }
     }
 
-    private fun setResultSignUp() {
-        getResultText = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
-            if (result.resultCode == Activity.RESULT_OK){
-                val id = result.data?.getStringExtra("id")
-                val password = result.data?.getStringExtra("password")
-                binding.etId.setText(id)
-                binding.etPw.setText(password)
-            }
 
-        }
-    }
 }
