@@ -1,16 +1,13 @@
 package com.example.soptseminar29th.presentation.sign
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.example.soptseminar29th.R
 import com.example.soptseminar29th.databinding.ActivitySignInBinding
+import com.example.soptseminar29th.presentation.home.HomeActivity
 import com.example.soptseminar29th.presentation.sign.viewmodel.SignInViewModel
 import com.example.soptseminar29th.util.BaseViewUtil
 import com.example.soptseminar29th.util.shortToast

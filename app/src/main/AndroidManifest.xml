@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoptSeminar29th">
         <activity
-            android:name=".presentation.sign.HomeActivity"
+            android:name=".presentation.home.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".presentation.sign.SignUpActivity"
