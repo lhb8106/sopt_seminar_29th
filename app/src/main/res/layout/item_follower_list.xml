@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="viewModel"
-            type="com.example.soptseminar29th.presentation.home.viewmodel.HomeViewModel" />
+            name="follower"
+            type="com.example.soptseminar29th.data.FollowerData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

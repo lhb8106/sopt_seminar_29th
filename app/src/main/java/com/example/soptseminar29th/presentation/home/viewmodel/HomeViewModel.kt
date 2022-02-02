@@ -7,6 +7,6 @@ class HomeViewModel : ViewModel(){
     val name = "이혜빈"
     val age = "23"
     val mbti = "ESFJ"
-    val introduction = "안녕하세여~!".repeat(5)
+    val introduction = "안녕하세여~!".repeat(1)
     val profileImage = R.drawable.ic_launcher_background
 }
