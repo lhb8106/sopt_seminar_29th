@@ -202,7 +202,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_answer_introduction">
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/tv_follower"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/rectangle_fill_pink_10dp"
@@ -217,6 +217,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/tv_repository"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -228,15 +229,15 @@
                         android:text="레파지토리\n 목록"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        app:layout_constraintStart_toEndOf="@+id/textView"
-                        app:layout_constraintTop_toTopOf="@+id/textView" />
+                        app:layout_constraintStart_toEndOf="@+id/tv_follower"
+                        app:layout_constraintTop_toTopOf="@+id/tv_follower" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rl_follower"
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/container_rv"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="20dp"
@@ -244,21 +245,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cl_home_button" />
-
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rl_repository"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="20dp"
-                    android:visibility="invisible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cl_home_button" />
-
-
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

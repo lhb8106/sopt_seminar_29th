@@ -7,7 +7,7 @@ import com.example.soptseminar29th.data.FollowerData
 import com.example.soptseminar29th.databinding.ItemFollowerListBinding
 
 class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>() {
-    val userList = mutableListOf<FollowerData>()
+    private var followerData = mutableListOf<FollowerData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FollowerViewHolder {
         val binding = ItemFollowerListBinding.inflate(
@@ -19,25 +19,29 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
     }
 
     override fun onBindViewHolder(holder:FollowerViewHolder, position: Int) {
-        holder.onBind(userList[position])
+        holder.onBind(followerData[position])
     }
 
     override fun getItemCount(): Int {
-        return userList.size
+        return followerData.size
     }
 
 
-    class FollowerViewHolder(private val binding : ItemFollowerListBinding)
+    class FollowerViewHolder(val binding : ItemFollowerListBinding)
         :RecyclerView.ViewHolder(binding.root) {
-        fun onBind(followerdata: FollowerData) {
-            binding.tvFollowerTitle.text = followerdata.name
-            binding.tvFollowerSubTitle.text = followerdata.introduction
-//            binding.apply{
-//                follower = followerdata
-//
-//                //즉각적 반응 요청
-//                binding.executePendingBindings()
-//            }
+        fun onBind(followerData: FollowerData) {
+            binding.apply{
+                follower = followerData
+
+                //즉각적 반응 요청
+                binding.executePendingBindings()
+            }
         }
     }
+
+    fun setFollowerData(followerData: MutableList<FollowerData>) {
+        this.followerData = followerData
+        notifyDataSetChanged()
+    }
+
 }

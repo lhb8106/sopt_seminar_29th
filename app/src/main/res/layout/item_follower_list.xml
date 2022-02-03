@@ -12,13 +12,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_item_follower"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/img_follower_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_launcher_foreground"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:src="@{follower.image}"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,9 +31,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="12dp"
             android:textColor="@color/black"
             android:textSize="16sp"
+            android:text="@{follower.name}"
             app:layout_constraintStart_toEndOf="@+id/img_follower_item"
             app:layout_constraintTop_toTopOf="@+id/img_follower_item"
             tools:text="제목" />
@@ -41,6 +46,7 @@
             android:layout_marginTop="12dp"
             android:textColor="@color/black"
             android:textSize="12sp"
+            android:text="@{follower.introduce}"
             app:layout_constraintStart_toStartOf="@+id/tv_follower_title"
             app:layout_constraintTop_toBottomOf="@+id/tv_follower_title"
             tools:text="소제목" />
