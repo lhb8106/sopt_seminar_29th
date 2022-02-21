@@ -27,7 +27,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-
         <TextView
             android:id="@+id/tv_signup"
             android:layout_width="wrap_content"
@@ -41,7 +40,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
-
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
@@ -49,7 +47,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="25dp"
             android:text="@string/signup_name"
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +79,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="30dp"
             android:text="@string/signin_id"
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/signin_pw"
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/et_id"
@@ -145,7 +143,6 @@
             app:layout_constraintEnd_toEndOf="@+id/et_password"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/et_password" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

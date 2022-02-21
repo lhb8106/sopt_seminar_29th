@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.soptseminar29th.presentation.sign.viewmodel.HomeViewModel" />
+            type="com.example.soptseminar29th.presentation.home.viewmodel.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,14 +18,14 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="@string/SOPTHub"
+            android:textColor="@color/pink"
             android:textSize="35sp"
             android:textStyle="bold"
-            android:textColor="@color/pink"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <ScrollView
@@ -47,10 +47,10 @@
 
                 <ImageView
                     android:id="@+id/iv_profile"
-                    android:layout_width="180dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="20dp"
                     bind="@{viewModel.profileImage}"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -192,21 +192,59 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_introduction" />
 
-                <ImageButton
-                    android:id="@+id/btn_git"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="30dp"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/ic_launcher_foreground"
-                    android:maxWidth="60dp"
-                    android:maxHeight="60dp"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_home_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_answer_introduction">
 
+                    <TextView
+                        android:id="@+id/tv_follower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_fill_pink_10dp"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="28dp"
+                        android:paddingBottom="4dp"
+                        android:text="팔로워\n 목록"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
+                    <TextView
+                        android:id="@+id/tv_repository"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/rectangle_fill_orange_10dp"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="4dp"
+                        android:text="레파지토리\n 목록"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@+id/tv_follower"
+                        app:layout_constraintTop_toTopOf="@+id/tv_follower" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/container_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_home_button" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
